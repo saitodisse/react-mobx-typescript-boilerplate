@@ -10,12 +10,8 @@ export class CounterStore {
 
   @observable public count: number = 0
 
-  @action public incrementCount = () => {
-    this.count++
-  }
-
-  @action public decrementCount = () => {
-    this.count--
+  @action public incrementCount = (increment: number) => {
+    this.count = this.count + increment
   }
 
   @action public resetCount = () => {
