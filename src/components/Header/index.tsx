@@ -1,7 +1,7 @@
-import * as React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { colors } from "../../utils/colors";
+import * as React from 'react'
+import { Link } from 'react-router-dom'
+import styled from '@emotion/styled'
+import { colors } from '../../utils/colors'
 
 const Container = styled.header`
   height: 60px;
@@ -9,19 +9,19 @@ const Container = styled.header`
   display: flex;
   box-sizing: border-box;
   align-items: center;
-`;
+`
 const Title = styled(Link)`
   flex: 1;
   color: ${colors.white};
   font-size: 20px;
   padding-left: 20px;
   text-decoration: none;
-`;
+`
 const Menu = styled.ul`
   display: flex;
   list-style: none;
   margin: 0;
-`;
+`
 const Item = styled(Link)`
   padding-right: 20px;
   color: ${colors.white};
@@ -31,7 +31,7 @@ const Item = styled(Link)`
   :hover {
     color: #000;
   }
-`;
+`
 
 export class Header extends React.Component<{}, {}> {
   public render() {
@@ -47,6 +47,6 @@ export class Header extends React.Component<{}, {}> {
           </li>
         </Menu>
       </Container>
-    );
+    )
   }
 }

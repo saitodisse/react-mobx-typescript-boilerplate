@@ -1,28 +1,28 @@
-import { observable, action, computed } from "mobx";
-import { RootStore } from "./RootStore";
+import { observable, action, computed } from 'mobx'
+import { RootStore } from './RootStore'
 
 export class CounterStore {
-  protected rootStore: RootStore;
+  protected rootStore: RootStore
 
   public constructor(rootStore: RootStore) {
-    this.rootStore = rootStore;
+    this.rootStore = rootStore
   }
 
-  @observable public count: number = 0;
+  @observable public count: number = 0
 
   @action public incrementCount = () => {
-    this.count++;
-  };
+    this.count++
+  }
 
   @action public decrementCount = () => {
-    this.count--;
-  };
+    this.count--
+  }
 
   @action public resetCount = () => {
-    this.count = 0;
-  };
+    this.count = 0
+  }
 
   @computed public get formatedCount() {
-    return `Counter: ${this.count}`;
+    return `Counter: ${this.count}`
   }
 }

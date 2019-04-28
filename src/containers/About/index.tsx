@@ -1,35 +1,35 @@
-import * as React from "react";
-import styled from "styled-components";
-import { colors } from "../../utils/colors";
+import * as React from 'react'
+import styled from '@emotion/styled'
+import { colors } from '../../utils/colors'
 
-import * as reactImg from "../../assets/img/react.svg";
-import * as mobxImg from "../../assets/img/mobx.png";
+import * as reactImg from '../../assets/img/react.svg'
+import * as mobxImg from '../../assets/img/mobx.png'
 
 const Container = styled.div`
   padding: 20px;
-`;
+`
 const Features = styled.div`
   display: flex;
   justify-content: space-around;
-`;
+`
 const Content = styled.div`
   color: ${colors.gray};
-`;
+`
 const Title = styled.span`
   font-size: 20px;
   color: ${colors.blue};
-`;
+`
 const ImgContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-`;
+`
 const Image = styled.img`
   max-width: 200px;
   max-height: 200px;
   height: auto;
   width: auto;
-`;
+`
 
 export class About extends React.Component<{}, {}> {
   public render() {
@@ -68,6 +68,6 @@ export class About extends React.Component<{}, {}> {
           </ImgContent>
         </Features>
       </Container>
-    );
+    )
   }
 }
